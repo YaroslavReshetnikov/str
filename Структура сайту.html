@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Семантичний HTML-сайт</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "aside main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #444;
+      color: white;
+      padding: 1em;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: #eee;
+      padding: 1em;
+    }
+
+    aside {
+      grid-area: aside;
+      background-color: #f9f9f9;
+      padding: 1em;
+    }
+
+    main {
+      grid-area: main;
+      padding: 2em;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.9em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Мій навчальний HTML-сайт</h1>
+  </header>
+
+  <nav>
+    <h2>Навігація</h2>
+    <ul>
+      <li><a href="#start">Вступ</a></li>
+      <li><a href="#headers">Заголовки</a></li>
+      <li><a href="#images">Зображення</a></li>
+      <li><a href="#links">Посилання</a></li>
+    </ul>
+  </nav>
+
+  <aside>
+    <h2>Бічна панель</h2>
+    <p>Тут можна додати додаткову інформацію або посилання.</p>
+  </aside>
+
+  <main>
+    <section>
+      <article>
+        <h1 id="start">Вступ до HTML-документа</h1>
+        <p><strong>HTML</strong> (HyperText Markup Language) — це мова розмітки, яка використовується для створення структурованих веб-сторінок. Вона дозволяє розміщувати <em>текст</em>, зображення, таблиці, посилання та багато іншого.</p>
+
+        <h2>Зміст</h2>
+        <ul>
+          <li><a href="#headers">Заголовки</a></li>
+          <li><a href="#images">Зображення</a></li>
+          <li><a href="#links">Посилання</a></li>
+        </ul>
+
+        <h2 id="headers">Використання заголовків</h2>
+        <p>Заголовки в HTML позначаються тегами від <code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>, де <code>&lt;h1&gt;</code> — найбільший заголовок, а <code>&lt;h6&gt;</code> — найменший.</p>
+
+        <h3>Приклад ієрархії заголовків</h3>
+        <ul>
+          <li><h4>Підрозділ 1</h4></li>
+          <li><h5>Підрозділ 1.1</h5></li>
+          <li><h6>Підрозділ 1.1.1</h6></li>
+        </ul>
+
+        <h2 id="images">Додавання зображень</h2>
+        <p>HTML дозволяє вставляти зображення за допомогою тегу <code>&lt;img&gt;</code>.</p>
+
+        <h3>Звичайне зображення</h3>
+        <img src="https://via.placeholder.com/300x200" alt="Зразок зображення">
+
+        <h3>Зображення з підписом</h3>
+        <figure>
+          <img src="https://via.placeholder.com/400x250" alt="Природа">
+          <figcaption>Рисунок 1. Краєвид природи</figcaption>
+        </figure>
+
+        <h3>Локальне зображення</h3>
+        <p>Це зображення має зберігатися у вашій локальній теці:</p>
+        <img src="images/mylocalimage.jpg" alt="Моє локальне зображення" width="300">
+
+        <h2 id="links">Гіперпосилання</h2>
+
+        <h3>Внутрішні посилання</h3>
+        <p>Перейти <a href="#start">до початку документа</a>.</p>
+
+        <h3>Зовнішні посилання</h3>
+        <p>Детальніше про HTML можна прочитати на <a href="https://developer.mozilla.org/uk/docs/Web/HTML" target="_blank">MDN Web Docs</a>.</p>
+
+        <h3>Посилання на інший документ</h3>
+        <p>Ознайомтесь з нашим <a href="styles.html">документом про CSS</a>, щоб дізнатися, як стилізувати сторінки.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Навчальний HTML-сайт. Усі права захищено.</p>
+  </footer>
+
+</body>
+</html>
